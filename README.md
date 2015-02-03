@@ -1,6 +1,6 @@
 acf-chosen
 ==========
 
-Chosen script for Advanced Custom Fields
+Forked from https://github.com/daltonrooney/acf-chosen
 
-This applies the chosen.js script to all select fields in the WP admin. You'll probably want to edit the javascript to be much more selective in which select fields it is applied to.
+Applies jQuery Chosen to Advanced Custom Fields select fields
