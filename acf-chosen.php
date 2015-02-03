@@ -16,21 +16,18 @@ You should have received a copy of the GNU General Public License along with thi
 
 add_action( 'admin_footer-post.php', 'add_chosen_select' );
 add_action( 'admin_footer-post-new.php', 'add_chosen_select' );
-function add_chosen_select() {?>
-    
-	<script type="text/javascript">
-	jQuery(document).ready( function($) {
-		$(document).live('acf/setup_fields', function(e, div){
-			$("select").chosen();
-    	});
+function add_chosen_select() { ?>
+<script type="text/javascript">
+  jQuery(document).ready( function($) {
+    $(document).live('acf/setup_fields', function(e, div){
+      $("select").chosen();
     });
-	</script>
+  });
+</script>
 <?php }
 
-
+add_action('admin_enqueue_scripts', 'enqueue_chosen_js', 2000 );
 function enqueue_chosen_js() {
- 	wp_enqueue_script( 'chosen_js', plugins_url( '' ,  __FILE__ ) . '/lib/jquery.chosen.min.js', array('jquery'));
-	wp_enqueue_style( 'chosen_js', plugins_url( '' ,  __FILE__ ) . '/lib/chosen.min.css');
+  wp_enqueue_script( 'chosen_js', plugins_url( '' ,  __FILE__ ) . '/lib/jquery.chosen.min.js', array('jquery') );
+  wp_enqueue_style( 'chosen_js', plugins_url( '' ,  __FILE__ ) . '/lib/chosen.min.css' );
 }
-
-add_action('admin_enqueue_scripts', 'enqueue_chosen_js', 2000);
