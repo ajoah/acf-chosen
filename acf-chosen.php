@@ -18,8 +18,8 @@ add_action( 'admin_footer-post.php', 'add_chosen_select' );
 add_action( 'admin_footer-post-new.php', 'add_chosen_select' );
 function add_chosen_select() { ?>
 <script type="text/javascript">
-  jQuery(document).ready( function($) {
-    $(document).live('acf/setup_fields', function(e, div){
+  jQuery(function($) {
+    $(document).on('acf/setup_fields', function() {
       $("select").chosen();
     });
   });
