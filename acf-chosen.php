@@ -28,6 +28,6 @@ function add_chosen_select() { ?>
 
 add_action('admin_enqueue_scripts', 'enqueue_chosen_js', 2000 );
 function enqueue_chosen_js() {
-  wp_enqueue_script( 'chosen_js', plugins_url( '' ,  __FILE__ ) . '/lib/jquery.chosen.min.js', array('jquery') );
+  wp_enqueue_script( 'chosen_js', plugins_url( '' ,  __FILE__ ) . '/lib/chosen.jquery.min.js', array('jquery') );
   wp_enqueue_style( 'chosen_js', plugins_url( '' ,  __FILE__ ) . '/lib/chosen.min.css' );
 }
