@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Advanced Custom Fields Chosen plugin
-Plugin URI: https://github.com/daltonrooney/acf-chosen
+Plugin URI: https://github.com/levymetal/acf-chosen
 Description: Adds chosen.js to ACF dropdowns
 Author: Raygun Design, LLC
 Version: 1.0
