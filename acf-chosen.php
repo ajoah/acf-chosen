@@ -20,7 +20,7 @@ function add_chosen_select() { ?>
 <script type="text/javascript">
   jQuery(function($) {
     $(document).on('acf/setup_fields', function() {
-      $("select").chosen();
+      $('select'. '.acf_postbox').chosen();
     });
   });
 </script>
